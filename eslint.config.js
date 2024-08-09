@@ -11,5 +11,13 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   eslintPluginPrettierRecommended,
-  { rules: { "react/react-in-jsx-scope": "off" } },
+  {
+    rules: {
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+      // Using display name lint makes writing memo'd components a pain
+      "react/display-name": "off",
+    },
+  },
 ];

@@ -1,9 +1,14 @@
-function App() {
+import type { ReactElement } from "react";
+import { Layout } from "./layout/Layout";
+import { Header } from "./areas/Header";
+import { Footer } from "./areas/Footer";
+import { Main } from "./areas/Main";
+
+function App(): ReactElement {
   return (
-    <>
-      <h1 className="font-extrabold">Osu Replay Viewer</h1>
-      <p>Todo</p>
-    </>
+    <Layout header={<Header />} footer={<Footer />}>
+      <Main />
+    </Layout>
   );
 }
 
