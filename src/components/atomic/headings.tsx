@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from "react";
-import { cn } from "../utils/cn";
+import { cn } from "../../utils/cn";
 
 type H1Props = {
   children: ReactNode;
@@ -7,11 +7,19 @@ type H1Props = {
 
 export function H1({ children, ...rest }: H1Props): ReactElement {
   return (
-    <h1 {...rest} className={cn("text-3xl", rest.className)}>
+    <h1
+      {...rest}
+      className={cn(
+        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        rest.className,
+      )}
+    >
       {children}
     </h1>
   );
 }
+
+H1.displayName = "H1";
 
 type H2Props = {
   children: ReactNode;
@@ -19,11 +27,19 @@ type H2Props = {
 
 export function H2({ children, ...rest }: H2Props): ReactElement {
   return (
-    <h2 {...rest} className={cn("text-2xl", rest.className)}>
+    <h2
+      {...rest}
+      className={cn(
+        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        rest.className,
+      )}
+    >
       {children}
     </h2>
   );
 }
+
+H2.displayName = "H2";
 
 type H3Props = {
   children: ReactNode;
@@ -31,11 +47,19 @@ type H3Props = {
 
 export function H3({ children, ...rest }: H3Props): ReactElement {
   return (
-    <h3 {...rest} className={cn("text-xl", rest.className)}>
+    <h3
+      {...rest}
+      className={cn(
+        "scroll-m-20 text-2xl font-semibold tracking-tight",
+        rest.className,
+      )}
+    >
       {children}
     </h3>
   );
 }
+
+H3.displayName = "H3";
 
 type H4Props = {
   children: ReactNode;
@@ -43,32 +67,16 @@ type H4Props = {
 
 export function H4({ children, ...rest }: H4Props): ReactElement {
   return (
-    <h4 {...rest} className={cn("text-lg", rest.className)}>
+    <h4
+      {...rest}
+      className={cn(
+        "scroll-m-20 text-xl font-semibold tracking-tight",
+        rest.className,
+      )}
+    >
       {children}
     </h4>
   );
 }
 
-type H5Props = {
-  children: ReactNode;
-} & React.ComponentPropsWithoutRef<"h5">;
-
-export function H5({ children, ...rest }: H5Props): ReactElement {
-  return (
-    <h5 {...rest} className={cn("text-base", rest.className)}>
-      {children}
-    </h5>
-  );
-}
-
-type H6Props = {
-  children: ReactNode;
-} & React.ComponentPropsWithoutRef<"h6">;
-
-export function H6({ children, ...rest }: H6Props): ReactElement {
-  return (
-    <h6 {...rest} className={cn("text-sm", rest.className)}>
-      {children}
-    </h6>
-  );
-}
+H4.displayName = "H4";

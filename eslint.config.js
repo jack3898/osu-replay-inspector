@@ -14,6 +14,7 @@ export default [
   {
     rules: {
       "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
       "@typescript-eslint/explicit-function-return-type": "error",
       "@typescript-eslint/consistent-type-imports": "error",
       // Using display name lint makes writing memo'd components a pain
